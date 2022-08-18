@@ -1,0 +1,19 @@
+# npm init = > gerar package.json
+# npm i typescript -D = > instalar typescript mode dev
+#     package.json = > adicionar em "scripts": { start": "npx ts-node-dev app.ts" }
+
+# npx tsc --init = > gerar tsconfig
+# npm i @types/express -D = > adicionar o typescript do express
+# npm i ts-node-dev -D = > Instalar dependencias dos node para typescript
+
+# npm install dotenv-safe = > adicionar arquivo de varialve de ambiente
+#     package.json => adiconar em "scripts": {npx ts-node-dev -r dotenv/config app.ts }
+
+# npm i sequelize = > 
+# npm i sequelize mysql2 = > instalar dependecias do orm do mysql
+
+
+
+
+
+    
