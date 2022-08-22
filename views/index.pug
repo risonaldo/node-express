@@ -1,0 +1,26 @@
+extends app.pug 
+block titulo
+    title Lista de Clietes
+        
+block conteudo
+        h1 Lista de Cliente
+        table.table 
+            thead 
+                tr 
+                    th(scope='col') ID 
+                    th(scope='col') Nome 
+                    th(scope='col') Email 
+                    th(scope='col') Ações
+                tbody 
+                    for cliente, indice in cliente
+                        tr 
+                            td(scope="row") #{cliente.id}
+                            td 
+                                a(href=`/cliente/${cliente.id}`) #{cliente.nome}
+                            td #{cliente.email}
+                            td 
+                                a(href=`/cliente/${cliente.id}/editar`).btn.btn-success Editar
+                                form(action=`/cliente${cliente.id}?_method=DELETE` method='POST' style='display: inline;')
+                                    button(type='submit' value='submit' onclick='return confirm("Tem certeza que deseja Apagar?")').btn.btn-danger Excluir
+        a(href="/cliente/cadastrar").btn.btn-success Cadastrar Cliente
+    
